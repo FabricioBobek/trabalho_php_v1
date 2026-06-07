@@ -63,17 +63,6 @@ redito/
 6. Jean cria o index.php juntando tudo
 7. Testar junto
 ```
-
----
-
-## Como rodar
-
-1. Instalar XAMPP
-2. Colocar a pasta `redito` em `C:/xampp/htdocs/`
-3. Abrir `http://localhost/phpmyadmin` e importar `sql/banco.sql`
-4. Acessar `http://localhost/redito/`
-5. Cadastrar um usuário pelo site
-
 ---
 
 ## Páginas públicas (sem login)
@@ -84,17 +73,3 @@ redito/
 - `index.php?pagina=sobre` — sobre o sistema
 
 ---
-
-## Requisitos atendidos
-
-| Requisito | Como está |
-|---|---|
-| index.php com menu | index.php roteia todas as páginas |
-| Banco exportado | sql/banco.sql |
-| Lógica em PHP | Controllers com validação, sessão, CSRF |
-| PDO | Conexao.php |
-| Sessões | Login usa $_SESSION |
-| CSRF | Token em todos os formulários |
-| 3+ páginas públicas | Home, Login, Cadastro, Sobre |
-| CRUD | Usuário, Post, Comentário |
-| MVC | Model / View / Controller separados |
