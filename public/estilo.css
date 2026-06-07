@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dae0e6;
+    color: #1c1c1c;
+    font-size: 14px;
+}
+
+.topo {
+    background-color: #ff4500;
+    padding: 0 20px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.topo-inner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.topo nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 16px;
+    font-size: 13px;
+}
+
+.topo nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-usuario {
+    color: rgba(255,255,255,0.85);
+    margin-left: 16px;
+    font-size: 13px;
+}
+
+/* Container principal */
+.pagina {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 16px;
+}
+
+/* Layout de duas colunas (só na home) */
+.layout-dois {
+    display: flex;
+    gap: 24px;
+}
+
+.aviso {
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    width: 100%;
+}
+
+.aviso-erro { background: #fde8e8; color: #c0392b; border: 1px solid #e8a0a0; }
+.aviso-ok   { background: #e6f4ea; color: #27ae60; border: 1px solid #a0d8a8; }
+
+.coluna-posts {
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar {
+    width: 270px;
+    flex-shrink: 0;
+}
+
+.sidebar-bloco {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 14px;
+    margin-bottom: 14px;
+}
+
+.sidebar-bloco h4 {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff4500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-bloco ul {
+    list-style: none;
+}
+
+.sidebar-bloco ul li {
+    margin-bottom: 6px;
+}
+
+.sidebar-bloco ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.sidebar-bloco ul li a:hover {
+    color: #ff4500;
+}
+
+.btn-criar {
+    display: block;
+    background: #ff4500;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.btn-criar:hover {
+    background: #d63c00;
+}
+
+.post-card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.post-card:hover {
+    border-color: #999;
+}
+
+.post-votos {
+    background: #f6f7f8;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 4px;
+    gap: 4px;
+    border-radius: 4px 0 0 4px;
+    flex-shrink: 0;
+}
+
+.post-votos a {
+    text-decoration: none;
+    color: #888;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.post-votos a:hover {
+    color: #ff4500;
+}
+
+.post-votos .num-votos {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+.post-info {
+    padding: 10px 12px;
+    flex: 1;
+}
+
+.post-info .categoria {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.post-info .categoria a {
+    color: #ff4500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post-info h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.post-info h3 a {
+    color: #222;
+    text-decoration: none;
+}
+
+.post-info h3 a:hover {
+    color: #ff4500;
+}
+
+.post-info .meta {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.post-info .acoes a {
+    font-size: 12px;
+    color: #888;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.post-info .acoes a:hover {
+    color: #ff4500;
+}
+
+.caixa-form {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 24px;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.caixa-form h2 {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.caixa-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.caixa-form input,
+.caixa-form select,
+.caixa-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.caixa-form input:focus,
+.caixa-form textarea:focus,
+.caixa-form select:focus {
+    outline: none;
+    border-color: #ff4500;
+}
+
+.caixa-form button {
+    width: 100%;
+    padding: 10px;
+    background: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.caixa-form button:hover {
+    background: #d63c00;
+}
+
+.caixa-form p {
+    margin-top: 14px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.caixa-form p a {
+    color: #ff4500;
+}
+
+.comentario {
+    background: white;
+    border: 1px solid #e8e8e8;
+    border-left: 3px solid #ff4500;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 0 4px 4px 0;
+}
+
+.comentario .com-autor {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+}
+
+.comentario .com-data {
+    font-size: 11px;
+    color: #aaa;
+    margin-left: 8px;
+}
+
+.comentario p {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.comentario .com-remover {
+    font-size: 11px;
+    color: #c0392b;
+    text-decoration: none;
+    float: right;
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 30px;
+}
+
+.post-completo {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.post-completo h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.post-completo .meta {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 14px;
+}
+
+.post-completo .conteudo {
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.form-comentario {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.form-comentario h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.form-comentario textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 8px;
+    resize: vertical;
+}
+
+.form-comentario button {
+    background: #ff4500;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.form-comentario button:hover {
+    background: #d63c00;
+}
